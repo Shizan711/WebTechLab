@@ -1,0 +1,17 @@
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(45, 45, 100);
+    text-align: center;
+    background-color: rgba(193, 195, 215, 0.823);
+}
+
+section{
+    text-align: center;
+}
+button{
+    color: rgb(253, 249, 249);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    background-color: rgb(218, 112, 46);
+    background-position: 0cm;
+}
