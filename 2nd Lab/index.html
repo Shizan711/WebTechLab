@@ -11,18 +11,18 @@
 <form action="/submit" method="post">
     <h2 style="background-color: rgb(218, 112, 46); color: azure; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;">Student Informations:</h2>
 
-        <label for="fullname">Full Name :</label>
-        <input type="text" id="fullname" name="fullname" placeholder="Full name"><br><br>
+        <label for="fullname">Full Name :</label><br>
+        <input type="text" id="fullname" name="fullname" placeholder="Full name"><br>
 
-        <label for="id">ID :</label>
-        <input type="text" id="id" name="id" placeholder="Authorized Id"><br><br>
+        <label for="id">ID :</label><br>
+        <input type="text" id="id" name="id" placeholder="Authorized Id"><br>
 
-        <label for="dept">Department Name :</label>
-        <input type="text" id="dept" name="dept" placeholder="Department"><br><br>
+        <label for="dept">Department Name :</label><br>
+        <input type="text" id="dept" name="dept" placeholder="Department"><br>
 
-        <label for="date">Date of Birth :</label>
+        <label for="date">Date of Birth :</label><br>
         <input type="date" id="date" name="date" placeholder="Date of Birth"><br>
-
+       
         <p>Gender:
         <input type="radio" id="male" name="gender" value="male">
         <label for="male">Male</label>
@@ -30,36 +30,39 @@
         <input type="radio" id="female" name="gender" value="female">
         <label for="female">Female</label></p>
 
-        <label for="nation">Nationality :</label>
-        <input type="text" id="nation" name="nation" placeholder="Nationality"><br><br>
+        <label for="nation">Nationality :</label><br>
+        <input type="text" id="nation" name="nation" placeholder="Nationality"><br>
 
-        <label for="contact">Contact Information :</label>
+        <label for="contact">Contact Information :</label><br>
         <input type="text" id="contact" name="contact" placeholder="Conatct Info."><br>
-
+       
+        <label for="img">Upload image:</label><br>
+        <input type="file" id="img" name="img" accept="image/*"><br>
+       
         <h2 style="background-color: rgb(218, 112, 46); color: azure; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;">Parent/Guardian Informations:</h2>
         
-        <label for="fullname">Parent/Guardian Name :</label>
-        <input type="text" id="fullname" name="fullname" placeholder="Full name"><br><br>
+        <label for="fullname">Parent/Guardian Name :</label><br>
+        <input type="text" id="fullname" name="fullname" placeholder="Full name"><br>
 
-        <label for="relation">Relation to Student :</label>
-        <input type="text" id="relation" name="relation" placeholder="Relation"><br><br>
+        <label for="relation">Relation to Student :</label><br>
+        <input type="text" id="relation" name="relation" placeholder="Relation"><br>
 
-        <label for="contact">Contact Information :</label>
-        <input type="text" id="contact" name="contact" placeholder="Contact Info."><br><br>
+        <label for="contact">Contact Information :</label><br>
+        <input type="text" id="contact" name="contact" placeholder="Contact Info."><br>
 
-        <label for="econ">Emergency Contact Information:</label>
+        <label for="econ">Emergency Contact Information:</label><br>
         <input type="text" id="econ" name="date" placeholder="Emergency Contact."><br>
 
         <h2 style="background-color: rgb(218, 112, 46); color: azure; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;">Education Informations:</h2>
 
-         <label for="schoolname">School Name :</label>
-        <input type="text" id="schoolname" name="schoolname" placeholder="School"><br><br>
+         <label for="schoolname">School Name :</label><br>
+        <input type="text" id="schoolname" name="schoolname" placeholder="School"><br>
 
-        <label for="college">College Name :</label>
-        <input type="text" id="college" name="college" placeholder="College"><br><br>
+        <label for="college">College Name :</label><br>
+        <input type="text" id="college" name="college" placeholder="College"><br>
 
         
-        <label for="uni">University Name :</label>
+        <label for="uni">University Name :</label><br>
         <input type="text" id="uni" name="uni" placeholder="University"><br>
 
         <h2 style="background-color: rgb(218, 112, 46); color: azure; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;">Personal Informations:</h2>
@@ -73,7 +76,7 @@
         <label for="garden">Gardening</label>
         <input type="checkbox" id="game" name="Hobby" value="game">
         <label for="game">Gaming</label>
-
+        </p>
 
  <section>
     <button type="submit">Submit</button>

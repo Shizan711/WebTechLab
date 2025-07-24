@@ -15,3 +15,30 @@ button{
     background-color: rgb(218, 112, 46);
     background-position: 0cm;
 }
+input{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 200px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #d81111;
+    border-radius: 5px;
+    font-size: 15px;
+}
+#male{
+    width: 20px;
+}
+#female{
+    width: 20px;
+}
+#travel{
+    width: 20px;
+}
+#game{
+    width: 20px;
+}
+#ticket{
+    width: 20px;
+}
+#garden{
+    width: 20px;
+}
