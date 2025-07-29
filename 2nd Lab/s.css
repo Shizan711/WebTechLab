@@ -1,0 +1,45 @@
+p{
+    color: red; 
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: yellow;
+    padding: 10px;
+    border: 25px solid black;
+    /* border-radius: 25px; */
+    /* box-shadow: 10px 10px 5px grey; */
+    margin: 0px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    line-height: 1.5; 
+    font-family: Arial, sans-serif;
+    position: sticky;
+    outline: 2px solid rgb(255, 0, 0);
+    outline-style: dotted;
+
+}
+
+div{
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(12, 180, 236);
+    border: 8px solid rgb(237, 7, 64);
+    padding: 10px;
+    border: 5px solid black;
+    z-index: 10;
+    
+}
+
+div.dive{
+    position: absolute;
+    top: 500px;
+    left: 50px;     
+    width: 200px;
+    height: 100px;
+    background-color: rgb(12, 180, 236);
+    border: 8px solid rgb(237, 7, 64);
+    padding: 10px;
+     }
