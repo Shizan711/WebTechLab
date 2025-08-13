@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+     <div class="container">
+        <!-- Registration Form Section -->
+        <div class="registration-section">
+            <h2>Student Registration</h2>
+            <form id="registrationForm">
+                <!-- Personal Information -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName" class="required">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required 
+                               pattern="[A-Za-z]{2,}" placeholder="Enter your first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName" class="required">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required 
+                               pattern="[A-Za-z]{2,}" placeholder="Enter your last name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email" class="required">Email Address</label>
+                        <input type="email" id="email" name="email" required 
+                               placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" 
+                               pattern="[0-9]{10}" placeholder="1234567890">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="birthdate" class="required">Date of Birth</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender">
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Academic Information -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="studentId" class="required">Student ID</label>
+                        <input type="text" id="studentId" name="studentId" required 
+                               pattern="[0-9]{6,8}" placeholder="Enter 6-8 digit ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="department" class="required">Department</label>
+                        <select id="department" name="department" required>
+                            <option value="">Select Department</option>
+                            <option value="cse">Computer Science</option>
+                            <option value="eee">Electrical Engineering</option>
+                            <option value="bba">Business Administration</option>
+                            <option value="eng">English</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="semester">Current Semester</label>
+                        <input type="number" id="semester" name="semester" min="1" max="12" placeholder="1-12">
+                    </div>
+                    <div class="form-group">
+                        <label for="cgpa">CGPA</label>
+                        <input type="number" id="cgpa" name="cgpa" min="0" max="4" step="0.01" placeholder="0.00-4.00">
+                    </div>
+                </div>
+
+                <!-- Skills and Experience -->
+                <div class="form-group full-width">
+                    <label>Programming Languages</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="html" name="skills" value="html">
+                            <label for="html">HTML/CSS</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="javascript" name="skills" value="javascript">
+                            <label for="javascript">JavaScript</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="python" name="skills" value="python">
+                            <label for="python">Python</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="java" name="skills" value="java">
+                            <label for="java">Java</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Learning Mode Preference</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="online" name="mode" value="online">
+                            <label for="online">Online</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="offline" name="mode" value="offline">
+                            <label for="offline">Offline</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="hybrid" name="mode" value="hybrid">
+                            <label for="hybrid">Hybrid</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="experience">Programming Experience (Years)</label>
+                    <div class="range-container">
+                        <input type="range" id="experience" name="experience" min="0" max="10" value="2" 
+                               oninput="document.getElementById('expValue').textContent = this.value">
+                        <div class="range-value">
+                            <span id="expValue">2</span> years
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Information -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="website">Personal Website</label>
+                        <input type="url" id="website" name="website" placeholder="https://yourwebsite.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="github">GitHub Profile</label>
+                        <input type="url" id="github" name="github" placeholder="https://github.com/username">
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="portfolio">Upload Portfolio (PDF)</label>
+                    <div class="file-upload">
+                        <input type="file" id="portfolio" name="portfolio" accept=".pdf">
+                        <label for="portfolio" class="file-upload-label">
+                            📁 Choose PDF file or drag and drop
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="goals">Career Goals</label>
+                    <textarea id="goals" name="goals" placeholder="Describe your career aspirations and goals..." maxlength="300"></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="startTime">Preferred Class Time</label>
+                    <input type="time" id="startTime" name="startTime">
+                </div>
+
+                <button type="submit" class="submit-btn">Register Now</button>
+            </form>
+        </div>
+
+        <!-- Resume Section -->
+        <div class="resume-section">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-image" id="profileImage"></div>
+                <h2 class="profile-name" id="profileName">John Doe</h2>
+                <p class="profile-title">Computer Science Student</p>
+            </div>
+
+            <!-- Contact Information -->
+            <h3>Contact Information</h3>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <span id="displayEmail">john.doe@email.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span id="displayPhone">+1 (555) 123-4567</span>
+                </div>
+                <div class="contact-item">
+                    <span>🌐</span>
+                    <span>www.johndoe.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>New York, USA</span>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <h3>Technical Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-item">HTML/CSS</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">React</div>
+                <div class="skill-item">Node.js</div>
+                <div class="skill-item">Git</div>
+            </div>
+
+            <!-- Academic Progress -->
+            <h3>Academic Progress</h3>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <p style="text-align: center; margin-top: 5px; color: #667eea; font-weight: bold;">CGPA: 3.75/4.00</p>
+
+            <!-- Education -->
+            <h3>Education</h3>
+            <div class="education-item">
+                <div class="education-title">Bachelor of Science in Computer Science</div>
+                <div class="education-school">University of Technology</div>
+                <div class="education-date">2022 - Present</div>
+            </div>
+
+            <!-- Experience -->
+            <h3>Experience</h3>
+            <div class="experience-item">
+                <div class="experience-title">Frontend Developer Intern</div>
+                <div class="experience-company">Tech Solutions Inc.</div>
+                <div class="experience-date">June 2024 - August 2024</div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-title">Web Development Freelancer</div>
+                <div class="experience-company">Self-Employed</div>
+                <div class="experience-date">January 2024 - Present</div>
+            </div>
+
+            <!-- Academic Transcript -->
+            <h3>Academic Transcript</h3>
+            <table class="grades-table">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credits</th>
+                        <th>Grade</th>
+                        <th>GPA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CSE101</td>
+                        <td>Programming Fundamentals</td>
+                        <td>3</td>
+                        <td class="grade-a">A</td>
+                        <td>4.00</td>
+                    </tr>
+                    <tr>
+                        <td>CSE201</td>
+                        <td>Data Structures</td>
+                        <td>3</td>
+                        <td class="grade-a">A-</td>
+                        <td>3.67</td>
+                    </tr>
+                    <tr>
+                        <td>CSE301</td>
+                        <td>Database Systems</td>
+                        <td>3</td>
+                        <td class="grade-b">B+</td>
+                        <td>3.33</td>
+                    </tr>
+                    <tr>
+                        <td>CSE401</td>
+                        <td>Web Technologies</td>
+                        <td>4</td>
+                        <td class="grade-a">A</td>
+                        <td>4.00</td>
+                    </tr>
+                    <tr>
+                        <td>ENG101</td>
+                        <td>English Composition</td>
+                        <td>3</td>
+                        <td class="grade-b">B</td>
+                        <td>3.00</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Projects -->
+            <h3>Notable Projects</h3>
+            <div class="experience-item">
+                <div class="experience-title">E-commerce Website</div>
+                <div class="experience-company">React, Node.js, MongoDB</div>
+                <div class="experience-date">Built a full-stack online store</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Form interaction and resume update
+        document.getElementById('registrationForm').addEventListener('input', function(e) {
+            const field = e.target;
+            
+            // Update resume based on form input
+            if (field.id === 'firstName' || field.id === 'lastName') {
+                const firstName = document.getElementById('firstName').value || 'John';
+                const lastName = document.getElementById('lastName').value || 'Doe';
+                document.getElementById('profileName').textContent = `${firstName} ${lastName}`;
+            }
+            
+            if (field.id === 'email') {
+                document.getElementById('displayEmail').textContent = field.value || 'john.doe@email.com';
+            }
+            
+            if (field.id === 'phone') {
+                document.getElementById('displayPhone').textContent = field.value || '+1 (555) 123-4567';
+            }
+        });
+
+        // File upload feedback
+        document.getElementById('portfolio').addEventListener('change', function(e) {
+            const label = e.target.nextElementSibling;
+            if (e.target.files.length > 0) {
+                label.textContent = `📄 ${e.target.files[0].name}`;
+                label.style.background = '#d4edda';
+                label.style.borderColor = '#27ae60';
+            }
+        });
+
+        // Form submission
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Registration completed successfully!');
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Hub Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Student Hub</h1>
+  <h4>Create Your Academic Profile</h4>
+
+  <form>
+    <h2>| PERSONAL DETAILS</h2>
+    <div class="form-group">
+      <div class="form-control">
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Enter first name" required>
+      </div>
+      <div class="form-control">
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Enter last name" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="form-control">
+        <label for="mail">Email</label>
+        <input type="text" id="mail" name="mail" placeholder="student@university.edu" required>
+      </div>
+      <div class="form-control">
+        <label for="phone">Phone</label>
+        <input type="number" id="phone" name="phone" placeholder="123-456-7890" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="form-control">
+        <label for="date">Date of Birth</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-control">
+        <label for="nationality">Nationality</label>
+        <select name="nationality" id="nationality" required>
+          <option value="">Select Country</option>
+          <option value="Bangladesh">Bangladesh</option>
+          <option value="Pakistan">Pakistan</option>
+          <option value="USA">USA</option>
+          <option value="Australia">Australia</option>
+        </select>
+      </div>
+    </div>
+
+    <h2>| ACADEMIC INFORMATION</h2>
+
+    <div class="form-group">
+      <div class="form-control">
+        <label for="stuid">Student ID</label>
+        <input type="text" id="stuid" name="stuid" placeholder="**-*****-*" required>
+      </div>
+      <div class="form-control">
+        <label for="Program">Program</label>
+        <select name="Program" id="Program" required>
+          <option value="">Choose Program</option>
+          <option value="CSE">CSE</option>
+          <option value="EEE">EEE</option>
+          <option value="IPE">IPE</option>
+          <option value="BBA">BBA</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="form-control">
+        <label for="year">Academic Year</label>
+        <input type="text" id="year" name="year" placeholder="1-5" required>
+      </div>
+      <div class="form-control">
+        <label for="cgpa">Current CGPA</label>
+        <input type="text" id="cgpa" name="cgpa" placeholder="3.75" required>
+      </div>
+    </div>
+
+    <h2>| Preferred Study Mode</h2>
+    <label><input type="radio" name="study" value="Online" required> Online Study</label><br>
+    <label><input type="radio" name="study" value="OnCampus"> On Campus</label><br>
+    <label><input type="radio" name="study" value="Hybrid"> Hybrid Study</label><br>
+    <label><input type="radio" name="study" value="Evening"> Evening Classes</label><br>
+
+    <h2>| Skills & Experience</h2>
+    <label><input type="checkbox" name="skills" value="HTML/CSS"> HTML/CSS</label><br>
+    <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label><br>
+    <label><input type="checkbox" name="skills" value="Python"> Python</label><br>
+    <label><input type="checkbox" name="skills" value="Other"> Other</label><br>
+
+    <label for="experience">Programming Experience (Years)</label>
+    <input type="range" id="experience" name="experience" min="0" max="6" value="3" oninput="experienceValue.value = this.value">
+    <output id="experienceValue">3</output>
+
+    <div class="form-group">
+      <div class="form-control">
+        <label for="url">Portfolio URL</label>
+        <input type="text" id="url" name="url" placeholder="Enter Portfolio">
+      </div>
+      <div class="form-control">
+        <label for="profile">LinkedIn Profile</label>
+        <input type="text" id="profile" name="profile" placeholder="Enter Profile Link">
+      </div>
+    </div>
+
+    <label for="resume">Upload Resume</label>
+    <input type="file" id="resume" name="resume">
+
+    <label for="goals">Career Goals</label>
+<textarea id="goals" name="goals" placeholder="Write about your goals here..." rows="5"></textarea>
+
+<label for="start">Preferred Start Date</label>
+<input type="datetime-local" id="start" name="start">
+
+<div class="btn-container">
+  <button type="submit">COMPLETE REGISTRATION</button>
+</div>
+  </form>
+
+</body>
+</html>
