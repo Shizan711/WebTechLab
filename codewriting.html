@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+  </style>
+<script>
+  function validateForm(event) {
+    event.preventDefault();
+
+    // Clear previous errors
+    document.querySelectorAll(".error").forEach(e => e.innerText = "");
+
+    // Collect values
+    let firstName = document.getElementById("fname").value.trim();
+    let lastName = document.getElementById("lname").value.trim();
+    let dob = document.getElementById("dob").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password1 = document.getElementById("password").value.trim();
+    let password2 = document.getElementById("confirmPassword").value.trim();
+    let phoneNumber = document.getElementById("phone").value.trim();
+
+    let gender = "";
+    if (document.getElementById("male").checked) {
+      gender = "Male";
+    } else if (document.getElementById("female").checked) {
+      gender = "Female";
+    }
+
+    // Validation using if–else
+    if (firstName === "") {
+      document.getElementById("fnameError").innerText = "Please enter your first name";
+      return false;
+    } else if (firstName.length < 2) {
+      document.getElementById("fnameError").innerText = "First name must be at least 2 characters";
+      return false;
+    } else if (lastName === "") {
+      document.getElementById("lnameError").innerText = "Please enter your last name";
+      return false;
+    } else if (lastName.length < 2) {
+      document.getElementById("lnameError").innerText = "Last name must be at least 2 characters";
+      return false;
+    } else if (dob === "") {
+      document.getElementById("dobError").innerText = "Please enter your date of birth";
+      return false;
+    } else if (gender === "") {
+      document.getElementById("genderError").innerText = "Please select your gender";
+      return false;
+    } else if (phoneNumber.length !== 11 || isNaN(phoneNumber)) {
+      document.getElementById("phoneError").innerText = "Please enter a valid 11-digit phone number";
+      return false;
+    } else if (email === "") {
+      document.getElementById("emailError").innerText = "Please enter your email";
+      return false;
+    } else if (password1 === "" || password2 === "") {
+      document.getElementById("passwordError").innerText = "Please enter password and confirm password";
+      return false;
+    } else if (password1 !== password2) {
+      document.getElementById("confirmPasswordError").innerText = "Passwords do not match";
+      return false;
+    } else {
+      // Final confirmation before submission
+      if (confirm("Do you want to submit?")) {
+        document.getElementById("data").innerHTML = `
+          <h2>Submitted Data</h2>
+          <p><strong>First Name:</strong> ${firstName}</p>
+          <p><strong>Last Name:</strong> ${lastName}</p>
+          <p><strong>DOB:</strong> ${dob}</p>
+          <p><strong>Gender:</strong> ${gender}</p>
+          <p><strong>Phone:</strong> ${phoneNumber}</p>
+          <p><strong>Email:</strong> ${email}</p>
+        `;
+        return true;
+      } else {
+        return false; // user cancelled submission
+      }
+    }
+  }
+</script>
+
+</head>
+<body>
+  <h1>Student Form</h1>
+
+  <form onsubmit="return validateForm(event)">
+    <div class="form-group">
+      <label for="fname">First Name:</label><br>
+      <input type="text" id="fname" name="fname">
+      <div id="fnameError" class="error"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="lname">Last Name:</label><br>
+      <input type="text" id="lname" name="lname">
+      <div id="lnameError" class="error"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="dob">DOB:</label><br>
+      <input type="date" id="dob" name="dob">
+      <div id="dobError" class="error"></div>
+    </div>
+
+    <div class="form-group">
+      <label>Gender:</label><br>
+      <input type="radio" id="male" name="gender">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender">
+      <label for="female">Female</label>
+      <div id="genderError" class="error"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number:</label><br>
+      <input type="text" id="phone" name="phone">
+      <div id="phoneError" class="error"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email">
+      <div id="emailError" class="error"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password">
+      <div id="passwordError" class="error"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password:</label><br>
+      <input type="password" id="confirmPassword" name="confirmPassword">
+      <div id="confirmPasswordError" class="error"></div>
+    </div>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+
+  <div id="data"></div>
+</body>
+</html>
